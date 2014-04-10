@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <title>Angular Prompt Demo</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+
+    .hightlight {
+        padding: 9px 14px;
+        margin-bottom: 14px;
+        background-color: #f7f7f9;
+        border: 1px solid #e1e1e8;
+        border-radius: 4px;
+    }
+
+  </style>
+
+</head>
+<body ng-controller="DemoCtrl">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <h2>angular-prompt</h2>
+        </div>
+        <div class="col-md-6">
+            <h4>Options</h4>
+            <div class="highlight">
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label for="title" class="col-sm-2 control-label">Title</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="title" placeholder="Title" ng-model="options.title">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="message" class="col-sm-2 control-label">Message</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="message" placeholder="Message" ng-model="options.message">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" ng-model="options.input"> Input
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="label" class="col-sm-2 control-label">Label</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="label" placeholder="label" ng-model="options.label">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="value" class="col-sm-2 control-label">Value</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="value" placeholder="Value" ng-model="options.value">
+                    </div>
+                  </div>     
+                  <div class="form-group">
+                    <label for="values" class="col-sm-2 control-label">Values</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="values" placeholder="comma separated list" ng-model="options.values" ng-list>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="buttons" class="col-sm-2 control-label">Buttons</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="buttons" placeholder="comma separated list" ng-model="options.buttons">
+                    </div>
+                  </div>                                         
+                </form>
+            </div>
+            <button class="btn btn-lg btn-primary pull-right" ng-click="go()">Prompt</button>
+        </div>
+        <div class="col-md-6">
+            <h4>Code</h4>
+            <div class="highlight">
+                <pre>{{getCode()}}</pre>
+            </div>            
+            <h4>Result</h4>
+            <div class="highlight">
+                <pre>{{results}}</pre>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/underscore/underscore.js"></script>
+  <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="../dist/angular-prompt.js"></script>
+  <script src="demo.js"></script> 
+
+</body>
+</html>
