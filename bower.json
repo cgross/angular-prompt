@@ -18,7 +18,7 @@
     "demo",
     "lib",
     "angular-prompt.html",
-    "angular-prompt.js",
+    "./angular-prompt.js",
     "Gruntfile.js",
     "package.json",
     "README.md"
