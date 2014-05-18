@@ -92,4 +92,8 @@ function MyCtrl($scope, prompt) {
 The function returns a promise.  That promise is resolved with either the button that was pressed, or in the case of input prompts, the value the user entered.  If the user pressed a button where `cancel=true` or canceled the dialog another way (hit ESC, etc) then the promise is rejected.
 
 ## Release History
+ * v1.0.1
+    * Updated modal template with correct modal title class.
+    * Added bower_components to ignore in bower.json.
+    * Moved to angular-bootstrap v0.11.
  * v1.0.0 - Initial release.
