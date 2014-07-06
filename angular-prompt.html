@@ -28,6 +28,6 @@
 
     </div>
     <div class="modal-footer">
-        <button ng-repeat="button in options.buttons track by button.label" class="btn btn-default" ng-class="{'btn-primary':button.primary}" ng-click="buttonClicked(button)">{{button.label}}</button>
+        <button ng-repeat="button in options.buttons track by button.label" class="btn btn-default {{button.class}}" ng-class="{'btn-primary':button.primary}" ng-click="buttonClicked(button)">{{button.label}}</button>
     </div>
 </div>

@@ -134,7 +134,7 @@ angular.module('cgPrompt').run(['$templateCache', function($templateCache) {
     "\n" +
     "    </div>\n" +
     "    <div class=\"modal-footer\">\n" +
-    "        <button ng-repeat=\"button in options.buttons track by button.label\" class=\"btn btn-default\" ng-class=\"{'btn-primary':button.primary}\" ng-click=\"buttonClicked(button)\">{{button.label}}</button>\n" +
+    "        <button ng-repeat=\"button in options.buttons track by button.label\" class=\"btn btn-default {{button.style}}\" ng-class=\"{'btn-primary':button.primary}\" ng-click=\"buttonClicked(button)\">{{button.label}}</button>\n" +
     "    </div>\n" +
     "</div>"
   );
