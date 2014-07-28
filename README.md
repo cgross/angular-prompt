@@ -85,7 +85,7 @@ function MyCtrl($scope, prompt) {
  A list of values available in a dropdown for the user to select as the input value.
 
  - #### options.buttons
- Type: `Array` of `Object` with properties `label`,`cancel`, `class`, and `primary`  
+ Type: `Array` of `Object` with properties `label`,`cancel`, `style`, and `primary`  
  Default: `[{ label:'OK', primary: true }, { label:'Cancel', cancel: true }]`  
  A list of the buttons to display on the dialog.
 
@@ -93,7 +93,7 @@ The function returns a promise.  That promise is resolved with either the button
 
 ## Release History
  * v1.1.0
-    * Added `class` option to buttons.
+    * Added `style` option to buttons.
  * v1.0.1
     * Updated modal template with correct modal title class.
     * Added bower_components to ignore in bower.json.
