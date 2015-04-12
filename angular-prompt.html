@@ -16,8 +16,8 @@
                 <div class="input-group" ng-if="options.values">
                     <input id="cgPromptInput" type="text" class="form-control" placeholder="{{options.label}}" ng-model="input.name" required ng-change="changed=true" autofocus="autofocus"/>
 
-                    <div class="input-group-btn">
-                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <div class="input-group-btn" dropdown>
+                        <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle data-toggle="dropdown"><span class="caret"></span></button>
                         <ul class="dropdown-menu pull-right">
                             <li ng-repeat="value in options.values"><a href="" ng-click="input.name = value">{{value}}</a></li>
                         </ul>

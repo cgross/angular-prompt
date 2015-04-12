@@ -20,7 +20,7 @@ module.exports = function (grunt) {
             spawn: false
         },
         files: ['angular-prompt.html','angular-prompt.js','dist/**/*','demo/**/*'],
-        tasks: ['jshint']
+        tasks: ['build']
       }
     },
     jshint: {

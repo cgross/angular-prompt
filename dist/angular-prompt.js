@@ -122,8 +122,8 @@ angular.module('cgPrompt').run(['$templateCache', function($templateCache) {
     "                <div class=\"input-group\" ng-if=\"options.values\">\n" +
     "                    <input id=\"cgPromptInput\" type=\"text\" class=\"form-control\" placeholder=\"{{options.label}}\" ng-model=\"input.name\" required ng-change=\"changed=true\" autofocus=\"autofocus\"/>\n" +
     "\n" +
-    "                    <div class=\"input-group-btn\">\n" +
-    "                        <button type=\"button\" class=\"btn btn-default dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"caret\"></span></button>\n" +
+    "                    <div class=\"input-group-btn\" dropdown>\n" +
+    "                        <button type=\"button\" class=\"btn btn-default dropdown-toggle\" dropdown-toggle data-toggle=\"dropdown\"><span class=\"caret\"></span></button>\n" +
     "                        <ul class=\"dropdown-menu pull-right\">\n" +
     "                            <li ng-repeat=\"value in options.values\"><a href=\"\" ng-click=\"input.name = value\">{{value}}</a></li>\n" +
     "                        </ul>\n" +
@@ -134,7 +134,7 @@ angular.module('cgPrompt').run(['$templateCache', function($templateCache) {
     "\n" +
     "    </div>\n" +
     "    <div class=\"modal-footer\">\n" +
-    "        <button ng-repeat=\"button in options.buttons track by button.label\" class=\"btn btn-default {{button.style}}\" ng-class=\"{'btn-primary':button.primary}\" ng-click=\"buttonClicked(button)\">{{button.label}}</button>\n" +
+    "        <button ng-repeat=\"button in options.buttons track by button.label\" class=\"btn btn-default {{button.class}}\" ng-class=\"{'btn-primary':button.primary}\" ng-click=\"buttonClicked(button)\">{{button.label}}</button>\n" +
     "    </div>\n" +
     "</div>"
   );
