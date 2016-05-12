@@ -9,7 +9,7 @@
             {{options.message}}
         </p>
 
-        <form id="cgPromptForm" name="cgPromptForm" ng-if="options.input" ng-submit="submit()">
+        <form id="cgPromptForm" name="form.cgPromptForm" ng-if="options.input" ng-submit="submit()">
             <div class="form-group" ng-class="{'has-error':cgPromptForm.$invalid && changed}">
                 <label for="cgPromptInput">{{options.label}}</label>
                 <input id="cgPromptInput" type="text" class="form-control"  placeholder="{{options.label}}" ng-model="input.name" required ng-change="changed=true" ng-if="!options.values || options.values.length === 0"/ autofocus="autofocus">
