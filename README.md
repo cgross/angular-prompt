@@ -92,6 +92,9 @@ function MyCtrl($scope, prompt) {
 The function returns a promise.  That promise is resolved with either the button that was pressed, or in the case of input prompts, the value the user entered.  If the user pressed a button where `cancel=true` or canceled the dialog another way (hit ESC, etc) then the promise is rejected.
 
 ## Release History
+ * v1.2.0
+    * Moved to Angular 1.5 and UI Bootstrap 1.3.
+    * Refactored code to no longer use angular.element(...).scope().
  * v1.1.0
     * Added `style` option to buttons.
  * v1.0.1
